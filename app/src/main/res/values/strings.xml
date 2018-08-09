@@ -1,0 +1,4 @@
+<resources >
+    <string name="app_name" >WxShareApp</string >
+    <string name="accessibility_service_name" >微信转发助手</string >
+</resources >
