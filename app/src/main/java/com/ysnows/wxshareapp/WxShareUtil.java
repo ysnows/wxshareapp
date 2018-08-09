@@ -2,6 +2,7 @@ package com.ysnows.wxshareapp;
 
 
 import android.Manifest;
+import android.app.ProgressDialog;
 import android.content.ComponentName;
 import android.content.Context;
 import android.content.Intent;
@@ -37,6 +38,7 @@ public class WxShareUtil {
     private static int downloadedSize = 0;//已经下载的图片数量
 
     private static ArrayList<Uri> uriList;//图片的uri
+    private static ProgressDialog progressDialog;
 
     /**
      * @param context
@@ -90,6 +92,11 @@ public class WxShareUtil {
         needDownloadSize = imgUrls.size();
         downloadedSize = 0;
         //先下载图片
+
+        progressDialog = new ProgressDialog(context);
+        progressDialog.setTitle("正在下载图片...");
+        progressDialog.setIndeterminate(true);
+        progressDialog.show();
         for (int i = 0; i < needDownloadSize; i++) {
             if (!TextUtils.isEmpty(imgUrls.get(i))) {//判断图片地址是否存在
                 okHttpSaveImg(imgUrls.get(i), i, context);
@@ -217,6 +224,7 @@ public class WxShareUtil {
     private static void checkDownload(Context context) {
         if (downloadedSize >= needDownloadSize) {//所有图片下载完成
             //并且图片全都替换好了
+            progressDialog.dismiss();
             share(context);
         }
 
