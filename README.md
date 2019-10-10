@@ -101,14 +101,5 @@ public class WeiXinShareUtil {
   > 如果有问题可以添加我的微信，或者给我点哄媳妇的零花钱（因为日夜写代码被老婆怀疑我不喜欢她了^^）
   
   
-###### 我的微信号(houloumengduan)
-  
-  ![image](http://upload-images.jianshu.io/upload_images/752480-5d7c3410512c07a8?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-###### 给我打赏^^
-
-![image](http://upload-images.jianshu.io/upload_images/752480-e97a0efdca593f91?imageMogr2/auto-orient/strip%7CimageView2/2/w/1240)
-
-    
 
 
